@@ -6,36 +6,36 @@
 
 
 function generateFortuneCookie() {
-    // This is where your code for the Fortune Cookie generator goes.
-    // You will use the fortunesList variable defined lower in this file
-    // to supply your fortune cookies with text.
+    /* This is where your code for the Fortune Cookie generator goes.
+     You will use the fortunesList variable defined lower in this file
+     to supply your fortune cookies with text. */
 
-    // TODO: Grab the paragraph with the ID
-    // `fortune-cookie-text` to be able to insert text into that element.
+    /* TODO: Grab the paragraph with the ID
+     `fortune-cookie-text` to be able to insert text into that element. */
 
-    var fortuneTxt = document.getElementById("fortune-cookie-text");
+    var fortuneTxt = document.getElementById("fortune-cookie-text"); // The html class fortune-cookie-text is now nestled in fortuneTxt
 
-    fortuneTxt.innerHTML = fortunesList[Math.floor((Math.random() * fortunesList.length))];
+    fortuneTxt.innerHTML = fortunesList[Math.floor((Math.random() * fortunesList.length))]; //I am adding an outcome directly to the HTML = calling the array below[reaturning the largest integer less than or equal to that integer((grabing a random number between 0- array length))]
 
-    var lists = document.createElement("li");
+    var lists = document.createElement("li");//I am creating an html bulleted list
 
-    lists.innerHTML = (fortuneTxt.innerHTML);
+    lists.innerHTML = (fortuneTxt.innerHTML);//I am inserting the output of the above equation in my list aswell
 
-    document.getElementById("previous-fortunes-container").appendChild(lists);
+    document.getElementById("previous-fortunes-container").appendChild(lists);//I am making sure that my list is replicated in another html class
 
-    // TODO: Update the Previous Fortunes list with the current `innerHTML`
-    // value of `#fortune-cookie-text`. Follow these steps:
-        // 1. Create a new `li` element with the `document.createElement()` method.
-        // 2. Set the `innerHTML` of that element equal to the `innerHTML` of
-        //    the `#fortune-cookie-text` element.
-        // 3. Select the `#previous-fortunes-container` container and use
-        //    `appendChild()` to append the new `li` element you created above.
-        // 4. You should see the previous fortune cookie saying show up in the list.
+    /* TODO: Update the Previous Fortunes list with the current `innerHTML`
+     value of `#fortune-cookie-text`. Follow these steps:
+         1. Create a new `li` element with the `document.createElement()` method.
+         2. Set the `innerHTML` of that element equal to the `innerHTML` of
+            the `#fortune-cookie-text` element.
+         3. Select the `#previous-fortunes-container` container and use
+            `appendChild()` to append the new `li` element you created above.
+         4. You should see the previous fortune cookie saying show up in the list. */
 
-    // TODO: Select a new (random) fortune cookie saying from the data stored in the
-    // `fortunesList` variable. (HINT: You will use `Math.floor()` and
-    // `Math.random()` to accomplish this.) Use this data to update the
-    // `innerText` of the `#fortune-cookie-text` element.
+    /* TODO: Select a new (random) fortune cookie saying from the data stored in the
+     `fortunesList` variable. (HINT: You will use `Math.floor()` and
+     `Math.random()` to accomplish this.) Use this data to update the
+     `innerText` of the `#fortune-cookie-text` element. */
 
 }
 
